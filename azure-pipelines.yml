@@ -69,4 +69,9 @@ steps:
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
+  # pathToPublish: '$(Build.ArtifactStagingDirectory)'
+  # artifactName: drop
+  inputs:
+    targetPath: $(System.DefaultWorkingDirectory)/bin/WebApp
+    artifactName: WebApp
   condition: succeeded()
