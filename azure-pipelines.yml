@@ -12,12 +12,12 @@ variables:
   dotnetSdkVersion: '3.1.100'
 
 steps:
-- tasks: UseDotNet@2
+- task: UseDotNet@2
   displayName: 'user .Net core SDK $(dotnetSdkVersion)'
   input:
     version: '$(dotnetSdkVersion)'
 
-- tasks: Npm@1
+- task: Npm@1
   displayName: 'run npm install'
   inputs: 
     verbose: false
